@@ -1,2 +1,2 @@
-# Dynamic-Website
+# Portfolio Website
 All the data on the website is given from the Database.
