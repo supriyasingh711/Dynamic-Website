@@ -3,6 +3,7 @@ const routes=express.Router()
 const detail=require("../models/detail")
 const slider=require("../models/model")
 const service=require("../models/service")
+const credential=require("../models/credential")
 
 
 routes.get("/",async(req,res)=>{
@@ -24,4 +25,24 @@ res.render("index",{
 
 
 })
+
+routes.post("/process-contact-form",(request,response)=>{
+    console.log("form is submitted")
+    console.log(request.body)
+    //save data to database
+    try{
+        const data=credential.create(request.body)
+        console.log(data)
+        response.redirect("/")
+        
+    }catch(e){
+        console.log(e)
+        
+        response.redirect("/")
+
+    }
+})
+
+
 module.exports=routes
+

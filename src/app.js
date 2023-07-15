@@ -5,6 +5,7 @@ const mongoose=require('mongoose')
 const detail=require("../src/models/detail")
 const slider=require("../src/models/model")
 const service=require("../src/models/service")
+const bodyparser=require('body-parser')
 
 
 
@@ -14,8 +15,12 @@ app.listen(process.env.PORT | 5556,()=>{
 
 })
 const routes=require('./routes/main')
+app.use(bodyparser.urlencoded({
+  extended:true
+}))
 app.use('',routes)
 app.use('/static',express.static("public"))
+
 //template engine
 app.set('view engine','hbs')
 app.set('views','views')
