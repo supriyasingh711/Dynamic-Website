@@ -9,27 +9,13 @@
     {{#each slides}}
     <div class="carousel-item {{this.class}}">
       <img src="{{this.imageurl}}" class="d-block w-100 slider-image" alt="...">
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-none d-md-block text-block">
         <h5>{{this.title}}</h5>
         <p>{{this.subtitle}}</p>
       </div>
     </div>
     {{/each}}
-    {{!-- <div class="carousel-item">
-      <img src="static/imgs/best2.jpg" class="d-block w-100 slider-image" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="static/imgs/best3.jpg" class="d-block w-100 slider-image" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-  </div> --}}
+    
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -38,4 +24,5 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div>
 </div>
